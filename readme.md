@@ -16,6 +16,14 @@ Name | Link | Class | Dimension | Train Size | Test Size | Truncated
 :---: | :---: | :---: | :---: | :---: | :---: | :---:
 CharacterTrajectories | [Download](http://timeseriesclassification.com/description.php?Dataset=CharacterTrajectories) | 20 | 3 | 1422 | 1436 | 182
 
+### Generate npz file
+
+Unzip *CharacterTrajectories.zip* at  `data/CharacterTrajectories`, then run `dataprocess.py`.
+
+```python
+    python dataprocess.py
+```
+
 ## Generated Images
 
 ### Random noise, Random discrete code, Fixed continuous code
