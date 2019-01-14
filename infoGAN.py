@@ -129,7 +129,7 @@ class infoGAN(BasicTrainFramework):
         self.G_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=self.logit_fake, labels=tf.ones_like(self.logit_fake)))
         
         # discrete code : categorical
-        disc_code_est = self.softmax_cls[:, :self.class_num]
+        disc_code_est = self.logit_cls[:, :self.class_num]
         disc_code_tg = self.labels[:, :self.class_num]
         self.q_disc_loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=disc_code_est, labels=disc_code_tg))
         # continuous code : gaussian
